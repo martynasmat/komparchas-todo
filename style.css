@@ -1,0 +1,49 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.container {
+  text-align: center;
+  max-width: 600px;
+  margin: auto;
+}
+
+.text-container {
+  margin-bottom: 30px;
+}
+
+.text-container p {
+  font-size: 24px;
+  line-height: 1.5;
+  color: #333;
+}
+
+.login-logout-button {
+  padding: 15px 30px;
+  background-color: #ff5945;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 10px;
+  display: block;
+  font-size: 18px;
+}
+
+.login-logout-button:hover {
+  background-color: #e04a3f;
+}

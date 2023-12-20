@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wholly Plans</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="text-container">
+            <p>Ready to transform your chaotic schedule into a well-organized masterpiece? WhollyPlans is here to make your life simpler, and a whole lot more enjoyable! 🚀</p>
+        </div>
+        <button class="login-logout-button" id="loginButton">Login</button>
+        <button class="login-logout-button" onclick="redirectToRegister()">Register</button>
+    </div>
+
+    <div class="container" id="todoApp" style="display: none;">
+        <!-- Todo List Content -->
+        <h2>My To-Do List <img src="images/logobewp.png"></h2>
+        <div class="logout-container">
+            <button class="logout-button" onclick="logout()">Logout</button>
+        </div>
+        <div class="row">
+            <input type="text" id="input-box" placeholder="Add your text">
+            <button onclick="addTask()">Add</button>
+        </div>
+        <ul id="list-container">
+            <!-- List items will be dynamically added here -->
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById("loginButton").addEventListener("click", function() {
+            redirectToLogin();
+        });
+
+        function redirectToLogin() {
+            window.location.href = 'login.html';
+        }
+
+        function redirectToRegister() {
+            window.location.href = 'register.html';
+        }
+    </script>
+</body>
+</html>

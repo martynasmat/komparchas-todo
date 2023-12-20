@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wholly Plans - My To-Do List</title>
+    <link rel="stylesheet" href="list-style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logout-container">
+            <button class="logout-button" onclick="logout()">Logout</button>
+        </div>
+        <div class="todo-app">
+            <h2>My To-Do List <img src="images/logobewp.png"></h2>
+            <div class="row">
+                <input type="text" id="input-box" placeholder="Add your text">
+                <button onclick="addTask()">Add</button>
+            </div>
+            <ul id="list-container">
+                <!-- List items will be dynamically added here -->
+            </ul>
+        </div>
+    </div>
+    <script src="list-script.js"></script>
+    <script>
+        document.getElementById("logoutButton").addEventListener("click", function() {
+            logout();
+        });
+    </script>
+</body>
+</html>
