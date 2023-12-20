@@ -32,9 +32,19 @@ def check_login(username, password):
         SELECT user_password_hash, user_password_salt
         FROM users WHERE username = "{username}";
     """
-    print(query)
-    result = cursor.execute(query)
-    print(result)
+    cursor.execute(query)
+    response = cursor.fetchall()
+    if response:
+        result = response[0]
+        server_hashed = result[0]
+        server_salt = result[1]
+        user_hashed = bcrypt.hashpw(password.encode("utf-8"), server_salt.encode("utf-8")).decode("utf-8")
+        print(user_hashed)
+        if server_hashed == user_hashed:
+            print('AUTHENTICATED')
+            return True
+    return False
+
 
 
 def new_user(username, email, password):
@@ -46,7 +56,5 @@ def new_user(username, email, password):
         INSERT INTO users (username, user_email, user_password_hash, user_password_salt)
         VALUES ("{username}", "{email}", "{hashed.decode("utf-8")}", "{salt.decode("utf-8")}");
     """
-    print(query)
     result = cursor.execute(query)
-    print(bcrypt.hashpw(password.encode("utf-8"), salt.decode("utf-8").encode("utf-8")).decode("utf-8"))
     return True

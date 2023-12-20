@@ -22,14 +22,20 @@ def register():
         json_response = request.get_json()
         print(json_response)
         is_valid = new_user(json_response["username"], json_response["user_email"], json_response["password"])
-        return json_response, 201
+        if is_valid:
+                return json_response, 201
+        else:
+                return json_response, 401
 
 
 @app.route('/login/', methods=['POST'])
 def login():
         json_response = request.get_json()
         is_correct = check_login(json_response["username"], json_response["password"])
-        return json_response, 201
+        if is_correct:
+                return json_response, 201
+        else:
+                return json_response, 401
 
 if __name__ == "__main__":
   app.run(debug=True)
