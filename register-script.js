@@ -23,6 +23,13 @@ document.getElementById('register-form').addEventListener('submit', function(eve
                 "Accept": "application/json",
                 "Access-Control-Allow-Origin": "*",
             },
+        })
+        .then(function (response) {
+            if(response.status === 201) {
+                redirectToTodoList();
+            }else {
+                alert("blogai");
+            };
         });
 
         //redirectToTodoList();

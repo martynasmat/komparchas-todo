@@ -48,13 +48,20 @@ def check_login(username, password):
 
 
 def new_user(username, email, password):
-    salt = bcrypt.gensalt()
-    hashed = bcrypt.hashpw(password.encode("utf-8"), salt)
-    print(hashed)
     cursor = connection.cursor()
     query = f"""
-        INSERT INTO users (username, user_email, user_password_hash, user_password_salt)
-        VALUES ("{username}", "{email}", "{hashed.decode("utf-8")}", "{salt.decode("utf-8")}");
+        SELECT *
+        FROM users WHERE username = "{username}";
     """
-    result = cursor.execute(query)
-    return True
+    if cursor.execute(query) == 0:
+        salt = bcrypt.gensalt()
+        hashed = bcrypt.hashpw(password.encode("utf-8"), salt)
+        cursor = connection.cursor()
+        query = f"""
+            INSERT INTO users (username, user_email, user_password_hash, user_password_salt)
+            VALUES ("{username}", "{email}", "{hashed.decode("utf-8")}", "{salt.decode("utf-8")}");
+        """
+        cursor.execute(query)
+        return True
+    else:
+        return False
