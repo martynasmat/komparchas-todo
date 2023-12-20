@@ -11,7 +11,22 @@ document.getElementById('register-form').addEventListener('submit', function(eve
     if (firstName && lastName && email && password) {
         // Redirect to the todo list after successful registration
         localStorage.setItem("isLoggedIn", "true");
-        redirectToTodoList();
+        
+        fetch("http://127.0.0.1:5000/register/", {
+            method: "POST",
+            body: JSON.stringify({
+                username: firstName,
+                password: password,
+                user_email: email,
+            }),
+            headers: {
+                "Content-type": "application/json", 
+                "Accept": "application/json",
+                "Access-Control-Allow-Origin": "*",
+            },
+        });
+
+        //redirectToTodoList();
     } else {
         alert('Please fill in all fields.');
     }

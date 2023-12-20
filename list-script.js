@@ -12,6 +12,21 @@ function addTask() {
         span.innerHTML = "\u00d7";
         li.appendChild(span);
     }
+
+    fetch("http://127.0.0.1:5000/add-task/", {
+        method: "POST",
+        body: JSON.stringify({
+            user_id: 1,
+            task_content: inputBox.value,
+            completed: false
+        }),
+        headers: {
+            "Content-type": "application/json", 
+            "Accept": "application/json",
+            "Access-Control-Allow-Origin": "*",
+        },
+    });
+
     inputBox.value = "";
     saveData();
 }
