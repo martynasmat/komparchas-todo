@@ -13,7 +13,7 @@ function addTask() {
         li.appendChild(span);
     }
 
-    fetch("http://127.0.0.1:5000/add-task/", {
+    fetch("http://45.13.225.82:8000/add-task/", {
         method: "POST",
         body: JSON.stringify({
             user_id: 1,

@@ -8,7 +8,7 @@ import bcrypt
 connection = MySQLdb.connect(
     host=os.getenv("DB_HOST"),
     user=os.getenv("DB_USERNAME"),
-    passwd= os.getenv("DB_PASSWORD"),
+    passwd=os.getenv("DB_PASSWORD"),
     db=os.getenv("DB_NAME"),
     autocommit=True,
     ssl={
