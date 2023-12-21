@@ -7,13 +7,13 @@
 
 /* Base styles */
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Consolas', monospace;
   margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f0f0f0;
+  background-color: #81998E;
 }
 
 .container {
@@ -32,18 +32,26 @@ body {
   color: #333;
 }
 
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Set a height for vertical centering */
+}
+
 .login-logout-button {
+  font-family:'Consolas', monospace;
   padding: 15px 30px;
-  background-color: #ff5945;
+  background-color: #2D4614;
   color: #fff;
   border: none;
   border-radius: 8px;
   cursor: pointer;
   margin: 10px;
-  display: block;
   font-size: 18px;
 }
 
+
 .login-logout-button:hover {
-  background-color: #e04a3f;
+  background-color: #2D4614;
 }
