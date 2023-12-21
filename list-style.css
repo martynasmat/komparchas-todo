@@ -4,27 +4,27 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Consolas', monospace;
 }
 
 .container {
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(135deg, #153677, #4e085f);
+    background: linear-gradient(135deg, #81998E, #F4EAF4);
     padding: 10px;
 }
 
 .todo-app {
     width: 100%;
     max-width: 540px;
-    background: #fff;
+    background: #F4EAF4;
     margin: 100px auto 20px;
     padding: 40px 30px 70px;
     border-radius: 10px;
 }
 
 .todo-app h2 {
-    color: #002765;
+    color: #2D4614;
     display: flex;
     align-items: center;
     margin-bottom: 20px;
@@ -39,7 +39,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #edeef0;
+    background: #d0d2c5;
     border-radius: 30px;
     padding-left: 20px;
     margin-bottom: 25px;
@@ -58,7 +58,7 @@ button {
     border: none;
     outline: none;
     padding: 16px 50px;
-    background: #ff5945;
+    background: #2D4614;
     color: #fff;
     font-size: 16px;
     cursor: pointer;
@@ -120,7 +120,7 @@ ul li span:hover {
 
 .logout-button {
     padding: 8px 16px;
-    background-color: #ff5945;
+    background-color: #2D4614;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -129,5 +129,5 @@ ul li span:hover {
 }
 
 .logout-button:hover {
-    background-color: #e04a3f;
+    background-color: #2D4614;
 }
