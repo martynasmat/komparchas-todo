@@ -8,7 +8,7 @@ document.getElementById('login-form').addEventListener('submit', function(event)
         // Set login status in localStorage
         localStorage.setItem("isLoggedIn", "true");
 
-        response = fetch("http://45.13.225.82:8000/login/", {
+        response = fetch("https://45.13.225.82:8000/login/", {
             method: "POST",
             body: JSON.stringify({
                 username: username,
