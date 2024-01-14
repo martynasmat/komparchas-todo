@@ -8,7 +8,7 @@ api = Api(app)
 
 parser = reqparse.RequestParser()
 CORS(app, support_credentials=True)
-
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 @app.route('/add-task/', methods=['POST'])
 def add_task():

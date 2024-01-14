@@ -13,7 +13,7 @@ function addTask() {
         li.appendChild(span);
     }
 
-    fetch("http://45.13.225.82:8000/add-task/", {
+    fetch("https://komparchas-f066e1f45e1b.herokuapp.com/add-task/", {
         method: "POST",
         body: JSON.stringify({
             user_id: 1,

@@ -11,7 +11,7 @@ document.getElementById('register-form').addEventListener('submit', function(eve
         // Redirect to the todo list after successful registration
         localStorage.setItem("isLoggedIn", "true");
         
-        fetch("http://45.13.225.82:8000/register/", {
+        fetch("https://komparchas-f066e1f45e1b.herokuapp.com/register/", {
             method: "POST",
             body: JSON.stringify({
                 username: username,
