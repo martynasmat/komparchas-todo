@@ -24,7 +24,7 @@ document.getElementById('login-form').addEventListener('submit', function(event)
             if(response.status === 201) {
                 redirectToTodoList();
             }else {
-                alert("blogai");
+                alert("Incorrect credentials");
             };
         });
         console.log(response);
