@@ -1,11 +1,10 @@
-/* Reset */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Base styles */
 body {
   font-family: 'Consolas', monospace;
   margin: 0;
@@ -36,11 +35,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Set a height for vertical centering */
+  height: 100vh;
 }
 
 .login-logout-button {
-  font-family:'Consolas', monospace;
+  font-family: 'Consolas', monospace;
   padding: 15px 30px;
   background-color: #2D4614;
   color: #fff;
@@ -51,7 +50,15 @@ body {
   font-size: 18px;
 }
 
-
 .login-logout-button:hover {
   background-color: #2D4614;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 200px;
+  max-height: 200px;
+  margin: auto;
 }
