@@ -8,7 +8,7 @@ document.getElementById('login-form').addEventListener('submit', function(event)
         // Set login status in localStorage
         localStorage.setItem("isLoggedIn", "true");
 
-        response = fetch("https://komparcho-projektas-9e82ac9e6f97.herokuapp.com/login/", {
+        response = fetch("https://komparchas-f066e1f45e1b.herokuapp.com/login/", {
             method: "POST",
             body: JSON.stringify({
                 username: username,
